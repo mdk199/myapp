@@ -1,7 +1,11 @@
 Myapp::Application.routes.draw do
   resources :cities
 
-  resources :states
+  resources :states do
+    member do
+      get :show_cities_details
+    end
+  end
 
   resources :countries do
     member do
@@ -58,7 +62,7 @@ Myapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#index'
+  root :to => 'countries#index'
 
   # See how all your routes lay out with "rake routes"
 

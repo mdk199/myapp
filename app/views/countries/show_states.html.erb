@@ -1,0 +1,12 @@
+<h1>Listing States in <%= @country.name%></h1>
+
+<table id="country_states_list" cellpadding="0" cellspacing="0" border="0" class="datatable table table-striped table-bordered" data-url="<%= show_states_details_country_path(@country.id)%>">
+  <thead>
+    <tr>
+      <%= @presenter.display_column_headers(@columns_headers) %>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>

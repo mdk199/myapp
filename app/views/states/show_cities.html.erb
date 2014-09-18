@@ -1,0 +1,12 @@
+<h1>Listing Cities in <%= @state.name%></h1>
+
+<table id="state_cities_list" cellpadding="0" cellspacing="0" border="0" class="datatable table table-striped table-bordered" data-url="<%= show_cities_details_state_path(@state.id)%>">
+  <thead>
+    <tr>
+      <%= @presenter.display_column_headers(@columns_headers) %>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
