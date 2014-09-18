@@ -2,7 +2,9 @@ class Country < ActiveRecord::Base
   has_many :states
   has_one  :currency
   has_one  :time_zone
-  has_one  :wiki_link, as: :linkable 
+  has_one  :wiki_link, as: :linkable
+
+  validates_presence_of :name
 
   def area
     area = 0
